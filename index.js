@@ -3,6 +3,14 @@ const bot = new Discord.Client()
 
 const config = require("./config.json")
 
+function verifyPermission(message) {
+    let modRole = message.guild.roles.find("name", config.modRole)
+    if(!message.member.roles.has(modRole.id)) {
+     return message.reply("[:x:] Vous n'avez pas la permission d'utiliser cette commande !").catch(console.error)
+    }
+    return true
+}
+
 bot.on('ready', () => {
     console.log("Switchy is operational")
 })
@@ -25,15 +33,12 @@ bot.on("message", message => {
      * SAY COMMAND / ADMIN COMMAND
      */
     if (command === "say") {
-        let modRole = message.guild.roles.find("name", "bot-op")
-        if(!message.member.roles.has(modRole.id)) {
-            return message.reply("[:x:] Vous n'avez pas la permission d'utiliser cette commande !").catch(console.error)
+        if(verifyPermission(message) == true){
+            message.channel.sendMessage(args.join(" "))
         }
-        message.channel.sendMessage(args.join(" "))
     }
 
 })
-
 
 
 bot.login(config.token)

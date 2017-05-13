@@ -1,4 +1,5 @@
 {
     "token": "TOKEN",
-    "prefix": "PREFIX OF COMMAND"
+    "prefix": "PREFIX OF COMMAND",
+    "modRole": "NAME OF MODEROLE"
 }
