@@ -30,12 +30,26 @@ bot.on("message", message => {
     let args = message.content.split(" ").slice(1)
 
     /**
-     * SAY COMMAND / ADMIN COMMAND
+     * SAY COMMAND / ADMIN COMMAND / SAY ARG 1 OF COMMAND
      */
     if (command === "say") {
         if(verifyIsOp(message) == true){
             message.channel.sendMessage(args.join(" "))
         }
+    }
+
+    /**
+     * GITHUB COMMAND / SHOW GITHUB REPOSITORY 
+     */
+
+    if (command === "github") {
+       const embed = new Discord.RichEmbed()
+        .setAuthor(config.github.author.name, config.github.author.avatar)
+        .setTitle('Aller voir le Github de Switchy !')
+        .setColor(config.github.color)
+        .setDescription('Voici le lien vers le Github de Switchy comme ça tu pourra contribuer à son développement')
+        .setURL(config.github.repository.url)
+        message.channel.send({embed});
     }
 
 })

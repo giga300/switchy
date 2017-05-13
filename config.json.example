@@ -1,5 +1,15 @@
 {
     "token": "TOKEN",
     "prefix": "PREFIX OF COMMAND",
-    "modRole": "NAME OF MODEROLE"
+    "modRole": "NAME OF MODEROLE",
+    "github": {
+        "color": "0x4343ef",
+        "author": {
+            "name": "AUTHOR NAME",
+            "avatar": "AVATAR LINK"
+        },
+        "repository": {
+            "url": "URL OF REPOSITORY"
+        }
+    }
 }
