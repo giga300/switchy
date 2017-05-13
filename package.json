@@ -1,0 +1,19 @@
+{
+  "name": "switchy",
+  "version": "0.0.1",
+  "description": "Bot du Discord [FR] Nintendo Switch",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giga300/switchy.git"
+  },
+  "author": "giga300 <giga300@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giga300/switchy/issues"
+  },
+  "homepage": "https://github.com/giga300/switchy#readme"
+}
