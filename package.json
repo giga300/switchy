@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/giga300/switchy/issues"
   },
-  "homepage": "https://github.com/giga300/switchy#readme"
+  "homepage": "https://github.com/giga300/switchy#readme",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
 }
