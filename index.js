@@ -3,7 +3,7 @@ const bot = new Discord.Client()
 
 const config = require("./config.json")
 
-function verifyPermission(message) {
+function verifyIsOp(message) {
     let modRole = message.guild.roles.find("name", config.modRole)
     if(!message.member.roles.has(modRole.id)) {
      return message.reply("[:x:] Vous n'avez pas la permission d'utiliser cette commande !").catch(console.error)
@@ -33,7 +33,7 @@ bot.on("message", message => {
      * SAY COMMAND / ADMIN COMMAND
      */
     if (command === "say") {
-        if(verifyPermission(message) == true){
+        if(verifyIsOp(message) == true){
             message.channel.sendMessage(args.join(" "))
         }
     }
